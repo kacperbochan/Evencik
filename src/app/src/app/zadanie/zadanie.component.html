@@ -1,0 +1,14 @@
+<td id="index">{{Zadanie.indeks}}</td>
+<td id="name">{{Zadanie.nazwa}}</td>
+<td id="date">{{Zadanie.czasPoczatek | date }}<hr/>{{Zadanie.czasKoniec | date}}</td>
+<td id="volu">{{Zadanie.wolontariuszeObecni}}/{{Zadanie.wolontariuszeWymagani}}</td>
+<td id="">
+
+  <b style="Color: green;" *ngIf="Zadanie.wolontariuszeObecni >= Zadanie.wolontariuszeWymagani">
+    ✓
+  </b>
+  <b style="Color: red;" *ngIf="Zadanie.wolontariuszeObecni < Zadanie.wolontariuszeWymagani">
+    X
+  </b>
+
+</td>
