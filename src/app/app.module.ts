@@ -1,6 +1,7 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { ZadanieComponent } from './zadanie/zadanie.component';
@@ -30,10 +31,20 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     FormsModule,
-    HttpClientModule
+    HttpClientModule,
     DragDropModule,
     FormsModule,
-    ScrollingModule
+    ScrollingModule,
+    RouterModule.forRoot([
+      { path: '', component: EventComponent, pathMatch: 'full' },
+      { path: 'event', component: EventComponent },
+      { path: 'event/create', component: EventCreateComponent },
+      { path: 'event/edit', component: EventEditComponent },
+      { path: 'wolontariusz/create', component: WolontariuszCreateComponent },
+      { path: 'wolontariusz/edit', component: WolontariuszEditComponent },
+      { path: 'zadanie/create', component: ZadanieCreateComponent },
+      { path: 'zadanie/edit', component: ZadanieEditComponent },
+    ])
   ],
   providers: [],
   bootstrap: [AppComponent]
