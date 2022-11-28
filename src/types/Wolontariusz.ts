@@ -85,10 +85,11 @@ export class Wolontariusz {
   }
 
   public GetWolontariuszById(id:number):Wolontariusz{
-    wol:Wolontariusz;
-    Wolontariusz.wolontariusze.find( item => {
-      if(item._indeks === id) return item;
-    });
-    return null;
+
+    Wolontariusz.wolontariusze.find( wol =>
+      wol._indeks === id
+    );
+    return new Wolontariusz();
+  }
 
 }

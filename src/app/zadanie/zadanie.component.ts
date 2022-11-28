@@ -16,7 +16,7 @@ export class ZadanieComponent implements OnInit {
   }
 
   ngOnInit(): void {
-    this.copy=new Zadanie("",-1,-1,true)
+    this.copy=new Zadanie("",-1,-1)
   }
 
   switchEdit(): void{

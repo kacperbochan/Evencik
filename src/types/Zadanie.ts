@@ -11,21 +11,14 @@ export class Zadanie {
   private _wolontariuszeWymagani: number;
 
   constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0)){
-      this._indeks = (wymagani===-1)?0:Zadanie.amount++;
+      this._indeks = (wymagani===-1||obecni===-1)?0:Zadanie.amount++;
       this._nazwa = nazwa;
 
-      if(cp)
-        this._czasPoczatek = new Date(pocz);
-      else
-        this._czasPoczatek.setDate(this._czasPoczatek.getDate()+Math.random()*100%50);
+      this._czasPoczatek = new Date(poczatek);
+      this._czasKoniec = new Date(koniec);
 
-      if(cp)
-        this._czasKoniec = new Date(kon);
-      else
-        this._czasKoniec.setDate(this._czasPoczatek.getDate()+Math.random()*10%3);
-
-      this._wolontariuszeWymagani = (wymagani>0)?wymagani:Math.floor(Math.random()*10%10);
-      this._wolontariuszeObecni = (obecni>0)?obecni:Math.floor(Math.random()*100%this._wolontariuszeWymagani);
+      this._wolontariuszeWymagani = wymagani;
+      this._wolontariuszeObecni = obecni;
 
   }
 
