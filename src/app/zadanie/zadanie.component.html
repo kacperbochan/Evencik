@@ -37,10 +37,10 @@
     </b>
   </span>
   <span *ngIf="!this.edit">
-    <b style="Color: green; vertical-align: middle;" *ngIf="zadanie.wolontariuszeObecni >= zadanie.wolontariuszeWymagani">
+    <b style="Color: green; vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni >= zadanie.wolontariuszeWymagani">
       ✓
     </b>
-    <b style="Color: red;vertical-align: middle;" *ngIf="zadanie.wolontariuszeObecni < zadanie.wolontariuszeWymagani">
+    <b style="Color: red;vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni < zadanie.wolontariuszeWymagani">
       X
     </b>
   </span>

@@ -1,0 +1,26 @@
+<body>
+    <div style="margin: 2%;">
+  <div style="text-align: left;margin-top: 50px;"><h3>Wydarzenia</h3></div>
+  
+  
+  <div>
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th scope="col">ID</th>
+        <th scope="col">Imie</th>
+        <th scope="col">Nazwisko</th>
+        <th scope="col">Telefon</th>
+        <th scope="col">Wiek<br/>wolontariuszy</th>
+        <th scope="col">Zarządzanie</th>
+      </tr>
+    </thead>
+    <tbody>
+      <ng-container>
+        <tr app-osoba *ngFor="let wolontariusz of Wolos" [wolontariusz]="wolontariusz"></tr>
+      </ng-container>
+    </tbody>
+  </table>
+  </div>
+  </div>
+  </body>
