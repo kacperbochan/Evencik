@@ -1,14 +1,51 @@
-<td id="index">{{Zadanie.indeks}}</td>
-<td id="name">{{Zadanie.nazwa}}</td>
-<td id="date">{{Zadanie.czasPoczatek | date }}<hr/>{{Zadanie.czasKoniec | date}}</td>
-<td id="volu">{{Zadanie.wolontariuszeObecni}}/{{Zadanie.wolontariuszeWymagani}}</td>
-<td id="">
-
-  <b style="Color: green;" *ngIf="Zadanie.wolontariuszeObecni >= Zadanie.wolontariuszeWymagani">
-    ✓
-  </b>
-  <b style="Color: red;" *ngIf="Zadanie.wolontariuszeObecni < Zadanie.wolontariuszeWymagani">
-    X
-  </b>
-
+<td class="index">
+  {{zadanie.indeks}}
+</td>
+<td class="name" [class.edit]="this.edit">
+  <textarea *ngIf="this.edit" [(ngModel)]="zadanie.nazwa" #name="ngModel" ngModel required></textarea>
+  <span *ngIf="!this.edit">
+    {{zadanie.nazwa}}
+  </span>
+</td>
+<td class="date">
+    <input type="date" *ngIf="this.edit" [(ngModel)]="zadanie.czasPoczatek" />
+    <span *ngIf="!this.edit">
+      {{zadanie.czasPoczatek | date}}
+    </span>
+  <hr/>
+    <input type="date" *ngIf="this.edit" [(ngModel)]="zadanie.czasKoniec" />
+    <span *ngIf="!this.edit">
+      {{zadanie.czasKoniec | date}}
+    </span>
+  </td>
+<td class="volu">
+  <input type="number" *ngIf="this.edit" [(ngModel)]="zadanie.wolontariuszeObecni" />
+  <span *ngIf="!this.edit">
+    {{zadanie.wolontariuszeObecni}}
+  </span>
+  /
+  <input type="number" *ngIf="this.edit" [(ngModel)]="zadanie.wolontariuszeWymagani" />
+  <span *ngIf="!this.edit">
+    {{zadanie.wolontariuszeWymagani}}
+  </span>
+</td>
+<td class="state">
+  <span *ngIf="this.edit">
+    <b style="Color: grey;">
+      ?
+    </b>
+  </span>
+  <span *ngIf="!this.edit">
+    <b style="Color: green;" *ngIf="zadanie.wolontariuszeObecni >= zadanie.wolontariuszeWymagani">
+      ✓
+    </b>
+    <b style="Color: red;" *ngIf="zadanie.wolontariuszeObecni < zadanie.wolontariuszeWymagani">
+      X
+    </b>
+  </span>
+</td>
+<td class="control">
+  <button *ngIf="this.edit" (click)="save()">Zapisz</button>
+  <button *ngIf="this.edit" (click)="cancel()">Cofnij</button>
+  <button *ngIf="!this.edit" (click)="switchEdit()">Edytuj</button>
 </td>

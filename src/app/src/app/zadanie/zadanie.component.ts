@@ -1,4 +1,5 @@
 import { Component, Input, OnInit } from '@angular/core';
+import { Zadanie } from '../../types/Zadanie';
 
 @Component({
   selector: '[app-zadanie]',
@@ -7,10 +8,30 @@ import { Component, Input, OnInit } from '@angular/core';
 })
 export class ZadanieComponent implements OnInit {
 
-  @Input() Zadanie: any;
+  edit:boolean = false;
+  @Input() zadanie: Zadanie;
+  copy: Zadanie;
 
-  constructor() { }
+  constructor() {
+  }
 
-  ngOnInit(): void {}
+  ngOnInit(): void {
+    this.copy=new Zadanie("",-1,-1,true)
+  }
 
+  switchEdit(): void{
+    this.copy.copy(this.zadanie);
+    this.edit = true;
+  }
+  save(){
+    this.edit = false;
+  }
+  cancel(){
+    this.zadanie.copy(this.copy) ;
+    this.edit=false;
+  }
+
+  verifyData(formValues: object): void {
+
+  }
 }

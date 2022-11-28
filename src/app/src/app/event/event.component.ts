@@ -8,6 +8,8 @@ import { Zadanie } from '../../types/Zadanie';
 })
 export class EventComponent implements OnInit {
 
+  selected: number = -1;
+
   Events = new Array(
     new Zadanie("Zamieść scenę", 3),
     new Zadanie("Ogarnąć pare kabli", 2, 2),
@@ -21,5 +23,8 @@ export class EventComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  selectZadanie(i:number):void{
+    this.selected = i;
+  }
 
 }

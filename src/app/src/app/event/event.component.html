@@ -7,9 +7,10 @@
       <th>Data</th>
       <th>Wolontariusze</th>
       <th>Dość<br/>wolontariuszy</th>
+      <th>Zarządzanie</th>
     </tr>
-    <ng-container *ngFor="let zadanie of Events">
-      <tr app-zadanie [Zadanie]="zadanie"></tr>
+    <ng-container>
+      <tr app-zadanie *ngFor="let zadanie of Events" [zadanie]="zadanie"></tr>
     </ng-container>
 
   </table>
