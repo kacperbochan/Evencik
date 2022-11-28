@@ -1,5 +1,7 @@
 import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { Zadanie } from '../../types/Zadanie';
+import { ZadaniaService } from '../zadania.service';
+
 
 @Component({
   selector: 'app-event',
@@ -7,8 +9,12 @@ import { Zadanie } from '../../types/Zadanie';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-
+  zadania:Zadanie[]=[];
   selected: number = -1;
+
+  constructor(zadaniaService: ZadaniaService) {
+    zadaniaService.getZadaniaAsynch().subscribe(data=>this.zadania=data);
+  }
 
   Events = new Array(
     new Zadanie("Zamieść scenę", 3),
@@ -18,9 +24,10 @@ export class EventComponent implements OnInit {
     new Zadanie("Zrób salto")
   );
 
-  constructor() { }
 
-  ngOnInit(): void {
+
+  ngOnInit() {
+    console.log("Zadania", this.zadania.length,this.zadania);
   }
 
   selectZadanie(i:number):void{
