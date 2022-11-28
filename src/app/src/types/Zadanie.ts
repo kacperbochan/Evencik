@@ -1,14 +1,17 @@
+import { Wolontariusz } from "./Wolontariusz";
+
 export class Zadanie {
   private static amount: number = 0;
   private _indeks: number;
   private _nazwa: string;
   private _czasPoczatek: Date = new Date();
   private _czasKoniec: Date = new Date();
+  private _wolontariusze: Wolontariusz[];
   private _wolontariuszeObecni: number;
   private _wolontariuszeWymagani: number;
 
-  constructor(nazwa:string, wymagani:number=-1, obecni:number=-1, cp:boolean=false, pocz:Date=new Date(0), kon = new Date(0)){
-      this._indeks = (cp)?0:Zadanie.amount++;
+  constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0)){
+      this._indeks = (wymagani===-1)?0:Zadanie.amount++;
       this._nazwa = nazwa;
 
       if(cp)
