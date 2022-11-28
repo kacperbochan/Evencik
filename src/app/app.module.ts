@@ -5,12 +5,14 @@ import { AppComponent } from './app.component';
 import { ZadanieComponent } from './zadanie/zadanie.component';
 import { EventComponent } from './event/event.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     ZadanieComponent,
-    EventComponent
+    EventComponent,
+    NavbarComponent
   ],
   imports: [
     BrowserModule,
