@@ -1,0 +1,52 @@
+<div class="container ">
+  <div class="py-5 text-center">
+    <h2>Event</h2>
+    <hr>
+  </div>
+
+  <div class="g-5 d-flex justify-content-center">
+    <div class="col-md-7">
+      <h4 class="mb-3">Edytor Event-u</h4>
+      <form class="needs-validation" novalidate>
+        <div class="row g-3">
+          <div class="col-sm-12">
+            <label for="name" class="form-label">Nazwa</label>
+            <input type="text" class="form-control" id="name" placeholder="WaterStock" value="" required>
+            <div class="invalid-feedback">
+              Podaj prawidłową nazwę event-u
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="startDate" class="form-label">Początek</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" class="form-control" id="startDate" required>
+            <div class="invalid-feedback">
+                Podano nieprawidłową datę początkową
+              </div>
+            </div>
+          </div>
+
+          <div class="col-6">
+            <label for="endDate" class="form-label">Koniec</label>
+            <div class="input-group has-validation">
+              <input type="datetime-local" class="form-control" id="endDate" required>
+            <div class="invalid-feedback">
+                Podano nieprawidłową datę końcową
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+        <hr class="my-4">
+        <div class="row">
+          <button class="btn col btn-danger btn-lg" type="submit">Usuń</button>
+          <div class="col-5"></div>
+          <button class="btn col btn-primary btn-lg" type="submit">Zapisz</button>
+          <button class="btn col btn-secondary btn-lg" type="submit">Cofnij</button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

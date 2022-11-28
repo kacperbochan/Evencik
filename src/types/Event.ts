@@ -1,26 +1,21 @@
 import { Zadanie } from "./Zadanie";
 
 export class Event {
-  private static amount: number = 0;
-  private _indeks: number;
   private _nazwa: string;
-  private _dataPoczatek: Date = new Date();
-  private _dataKoniec: Date = new Date();
-  private _zadania: Zadanie[];
+  private _dataPoczatek: Date;
+  private _dataKoniec: Date;
+
+  //#region  connections
+  private _zadania: Zadanie[] = [];
+  //#endregion
 
   constructor(nazwa:string = "", poczatek:Date = new Date(0), koniec:Date = new Date(0)){
     this._nazwa = nazwa;
     this._dataPoczatek = poczatek;
     this._dataKoniec = koniec;
-
-    this._zadania = [];
   }
 
   //#region get/set
-  public get indeks() : number{
-    return this._indeks;
-  }
-
   public get nazwa() : string {
       return this._nazwa;
   }

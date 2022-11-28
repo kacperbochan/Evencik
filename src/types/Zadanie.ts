@@ -1,8 +1,6 @@
 import { Wolontariusz } from "./Wolontariusz";
 
 export class Zadanie {
-  private static amount: number = 0;
-  private _indeks: number;
   private _nazwa: string;
   private _czasPoczatek: Date = new Date();
   private _czasKoniec: Date = new Date();
@@ -11,7 +9,6 @@ export class Zadanie {
   private _wolontariuszeWymagani: number;
 
   constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0)){
-      this._indeks = (wymagani===-1||obecni===-1)?0:Zadanie.amount++;
       this._nazwa = nazwa;
 
       this._czasPoczatek = new Date(poczatek);
@@ -23,16 +20,11 @@ export class Zadanie {
   }
 
   public copy(zad:Zadanie){
-    this._indeks = zad.indeks;
     this._nazwa = zad.nazwa;
     this._czasPoczatek = zad.czasPoczatek;
     this._czasKoniec = zad.czasKoniec;
     this._wolontariuszeObecni = zad.wolontariuszeObecni;
     this._wolontariuszeWymagani = zad.wolontariuszeWymagani;
-  }
-
-  public get indeks() : number{
-    return this._indeks;
   }
 
   public get nazwa() : string {
