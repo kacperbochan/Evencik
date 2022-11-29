@@ -3,7 +3,7 @@
     margin-top: 50px;
   }
   table{
-    background-color: #FFEAEE;
+    background-color: #bce4fd;
     margin-left: auto;
     margin-right: auto;
   }
@@ -11,14 +11,14 @@
     width: 50px;
     text-align: center;
     vertical-align: middle;
-    background-color:  #D56AA0;
+    background-color:  #4272cb;
     color: white;
     font-family: "tahoma";
     font-weight: 500;
     padding: 5px;
   }
   .button {
-    background-color: #DBABBE; /* Green */
+    background-color: #5a8dea; /* Green */
     width: 220px;
     border: none;
     color: white;
@@ -29,5 +29,4 @@
     font-size: 16px;
     margin-bottom: 4px;
   }
-  
-  
+
