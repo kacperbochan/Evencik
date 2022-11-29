@@ -18,6 +18,8 @@ import { ZadanieEditComponent } from './forms/zadanie/zadanie-edit/zadanie-edit.
 import { ZadanieCreateComponent } from './forms/zadanie/zadanie-create/zadanie-create.component';
 import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
+import { HomeComponent } from './home/home.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -32,7 +34,10 @@ import { HttpClientModule } from '@angular/common/http';
     EventCreateComponent,
     EventEditComponent,
     ZadanieEditComponent,
-    ZadanieCreateComponent
+    ZadanieCreateComponent,
+    OsobaComponent,
+    HomeComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
@@ -42,7 +47,7 @@ import { HttpClientModule } from '@angular/common/http';
     FormsModule,
     ScrollingModule,
     RouterModule.forRoot([
-      { path: '', component: EventComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'event', component: EventComponent },
       { path: 'event/create', component: EventCreateComponent },
       { path: 'event/edit', component: EventEditComponent },
@@ -51,6 +56,7 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'zadanie/create', component: ZadanieCreateComponent },
       { path: 'zadanie/edit', component: ZadanieEditComponent },
       { path: 'wolo', component: WolontariuszeComponent },
+      { path: 'secret', component: EventComponent },
     ])
   ],
   providers: [],

@@ -17,9 +17,10 @@
     font-weight: 500;
     padding: 5px;
   }
+
   .button {
     background-color: #DBABBE; /* Green */
-    width: 220px;
+    width: 200px;
     border: none;
     color: white;
     padding: 15px 32px;
