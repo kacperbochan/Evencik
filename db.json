@@ -7,45 +7,27 @@
       "id": 1
     },
     {
-      "nazwa": "kacperboch",
+      "nazwa": "Zlot szalonych naukowców",
       "czasPoczatek": "2022-12-09T10:26",
       "czasKoniec": "2022-12-15T10:26",
       "id": 2
     },
     {
-      "nazwa": "Kacper Bochan",
+      "nazwa": "Sadzenie dyń",
       "czasPoczatek": "2022-11-03T10:38",
       "czasKoniec": "2022-12-02T10:38",
       "id": 3
     },
     {
-      "nazwa": "kacperboch",
+      "nazwa": "Maraton Warszawski",
       "czasPoczatek": "2022-11-29T01:41",
       "czasKoniec": "2022-12-09T10:41",
       "id": 4
-    },
-    {
-      "nazwa": "Nowe Wydarzenie",
-      "czasPoczatek": "2022-11-12T14:27",
-      "czasKoniec": "2022-12-01T14:27",
-      "id": 5
-    },
-    {
-      "nazwa": "ZUZU",
-      "czasPoczatek": "2022-12-09T14:27",
-      "czasKoniec": "2022-12-10T14:27",
-      "id": 6
-    },
-    {
-      "nazwa": "jjjjj",
-      "czasPoczatek": "2022-11-04T15:10",
-      "czasKoniec": "2022-11-05T15:10",
-      "id": 7
     }
   ],
   "zadania": [
     {
-      "nazwa": "Stephen",
+      "nazwa": "Stworzyć ziemię",
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
@@ -54,7 +36,7 @@
       "id": 1
     },
     {
-      "nazwa": "Zamiatanie",
+      "nazwa": "nie zniszczyć ziemi",
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
@@ -63,7 +45,7 @@
       "id": 2
     },
     {
-      "nazwa": "Stephen",
+      "nazwa": "Zasadzić dynię",
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
@@ -72,7 +54,7 @@
       "id": 3
     },
     {
-      "nazwa": "Stephen",
+      "nazwa": "Uciekać!!!",
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
@@ -83,7 +65,7 @@
   ],
   "wolontariusze": [
     {
-      "imie": "Stephen",
+      "imie": "Jan",
       "nazwisko": "Norman",
       "telefon": 666999777,
       "wiek": 18,
@@ -91,20 +73,20 @@
     },
     {
       "imie": "Stephen",
-      "nazwisko": "Norman",
+      "nazwisko": "Kowaluk",
       "telefon": 666999777,
       "wiek": 18,
       "id": 2
     },
     {
-      "imie": "Stephen",
-      "nazwisko": "Norman",
+      "imie": "Eryk",
+      "nazwisko": "Drenosz",
       "telefon": 666999777,
       "wiek": 18,
       "id": 3
     },
     {
-      "imie": "Stephen",
+      "imie": "Wiktoria",
       "nazwisko": "Norman",
       "telefon": 666999777,
       "wiek": 18,
@@ -112,31 +94,38 @@
     },
     {
       "imie": "Kacper",
-      "nazwisko": "Bochan",
+      "nazwisko": "Konratowski",
       "telefon": 797979797,
-      "wiek": -1,
+      "wiek": 19,
       "id": 5
     },
     {
-      "imie": "Kacper",
-      "nazwisko": "Bochan",
+      "imie": "Paweł",
+      "nazwisko": "Alpin",
       "telefon": 771144556,
-      "wiek": -1,
+      "wiek": 17,
       "id": 6
     },
     {
-      "imie": "Kacper",
+      "imie": "Piotr",
       "nazwisko": "Bochan",
       "telefon": 333333333,
-      "wiek": 123,
+      "wiek": 12,
       "id": 7
     },
     {
-      "imie": "Kacper",
-      "nazwisko": "Bochan",
+      "imie": "Miłosz",
+      "nazwisko": "Adamski",
       "telefon": 999999999,
       "wiek": 14,
       "id": 8
+    },
+    {
+      "imie": "Marcin",
+      "nazwisko": "Bochan",
+      "telefon": 555555554,
+      "wiek": 21,
+      "id": 9
     }
   ]
 }

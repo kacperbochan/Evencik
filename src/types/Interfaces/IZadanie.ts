@@ -1,4 +1,5 @@
 export interface IZadanie{
+  id?: number;
   nazwa: string;
   czasPoczatek: Date;
   czasKoniec: Date;

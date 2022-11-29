@@ -40,7 +40,7 @@ export class ZadaniaService {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-
+    console.log(zadanie);
     return this.http.post<ZadanieMap>(this.url, new ZadanieMap(zadanie), httpOptions)
       .pipe(
         catchError(this.handleError<ZadanieMap>('addZadanie'))

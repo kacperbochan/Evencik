@@ -22,7 +22,7 @@ export class Zadanie implements IZadanie {
       this._wolontariuszeObecni = obecni;
 
       this._eventId = eventId;
-      this._przydzieleniId = [];
+      this._przydzieleniId = [50];
   }
 
 
