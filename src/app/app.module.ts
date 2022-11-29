@@ -20,6 +20,7 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
+import { MyDirectiveDirective } from './my-directive.directive';
 
 @NgModule({
   declarations: [
@@ -37,7 +38,8 @@ import { EventsComponent } from './events/events.component';
     ZadanieCreateComponent,
     OsobaComponent,
     HomeComponent,
-    EventsComponent
+    EventsComponent,
+    MyDirectiveDirective
   ],
   imports: [
     BrowserModule,

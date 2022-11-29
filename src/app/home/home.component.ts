@@ -32,10 +32,5 @@ export class HomeComponent implements OnInit {
     this.eventService.addEvent(event).subscribe(ret => this.events.push(event));
   }
 
-  addEvent() {
-    const event = new Event("Gwiazdy nocą");
-    this.eventyService.addEvent(event).subscribe(ret => this.eventy.push(event));
-
-  }
 
 }
