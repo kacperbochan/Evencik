@@ -36,13 +36,6 @@ export class ZadaniaService {
     );
   }
 
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(operation + ' failed' + error);
-      return of(result as T);
-    };
-  }
-
 
   addZadanie(zadanie: Zadanie): Observable<Zadanie> {
     const httpOptions = {
@@ -55,5 +48,11 @@ export class ZadaniaService {
   }
 
 
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(operation + ' failed' + error);
+      return of(result as T);
+    };
+  }
 
 }

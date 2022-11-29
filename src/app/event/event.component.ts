@@ -9,7 +9,7 @@ import { ZadaniaService } from '../zadania.service';
   styleUrls: ['./event.component.css']
 })
 export class EventComponent implements OnInit {
-  zadania:Zadanie[]=[];
+  zadania: Zadanie[];
   selected: number = -1;
 
   constructor(private zadaniaService: ZadaniaService) {
