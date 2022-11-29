@@ -1,6 +1,6 @@
 <body>
     <div style="margin: 2%;">
-  
+
     <div class="container" style="margin: 0px;padding:0px; max-width: 2500px;">
       <div class="row">
         <div class="col-md">
@@ -11,8 +11,8 @@
         </div>
       </div>
     </div>
-  
-  
+
+
   <div>
   <table class="table table-bordered">
     <thead>
@@ -25,7 +25,7 @@
     </thead>
     <tbody>
       <ng-container>
-        <tr app-events *ngFor="let event of EventsList" [event]="event"></tr>
+        <tr app-events *ngFor="let event of EventsList; index as id" [event]="event" [id]="id"></tr>
       </ng-container>
     </tbody>
   </table>

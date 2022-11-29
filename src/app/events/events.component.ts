@@ -9,20 +9,14 @@ import { Event } from '../../types/Event';
 })
 export class EventsComponent implements OnInit {
 
-  edit:boolean = false;
   @Input() event: Event;
-  copy: Event;
+  @Input() id: number;
 
   constructor() {
   }
 
   ngOnInit(): void {
-    this.copy=new Event("");
   }
 
-
-  verifyData(formValues: object): void {
-
-  }
 }
 

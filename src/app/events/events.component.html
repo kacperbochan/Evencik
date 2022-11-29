@@ -1,25 +1,15 @@
 <td class="index">
-    {{event.indeks}}
-  </td>
-  <td class="name" [class.edit]="this.edit">
-    <textarea *ngIf="this.edit" [(ngModel)]="event.nazwa" #name="ngModel" ngModel required></textarea>
-    <span *ngIf="!this.edit">
-      {{event.nazwa}}
-    </span>
-  </td>
-  <td class="date">
-    <b>Start:</b>
-      <input type="date" *ngIf="this.edit" [(ngModel)]="event.czasPoczatek" />
-      <span *ngIf="!this.edit">
-        {{event.czasPoczatek | date}}
-      </span>
-      <b>End:</b>
-      <input type="date" *ngIf="this.edit" [(ngModel)]="event.czasKoniec" />
-      <span *ngIf="!this.edit">
-        {{event.czasKoniec | date}}
-      </span>
-    </td>
-    <td class="control">
-        <button class="button" *ngIf="!this.edit" >Edytuj</button>
-      </td>
-  
+  {{id}}
+</td>
+<td class="name">
+    {{event.nazwa}}
+</td>
+<td class="date">
+  <b>Start:</b>
+    {{event.czasPoczatek | date}}
+  <b>End:</b>
+    {{event.czasKoniec | date}}
+</td>
+<td class="control">
+  <button class="button" >Edytuj</button>
+</td>
