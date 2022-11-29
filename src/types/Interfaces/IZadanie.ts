@@ -3,5 +3,7 @@ export interface IZadanie{
   czasPoczatek: Date;
   czasKoniec: Date;
   wolontariuszeWymagani: number;
-  wolontariuszeObecni: number;
+
+  eventId: number;
+  przydzieleniId: number[];
 }

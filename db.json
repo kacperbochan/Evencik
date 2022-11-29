@@ -7,10 +7,22 @@
       "id": 1
     },
     {
-      "nazwa": "Stephen",
-      "czasPoczatek": "1970-01-01T00:00:00.000Z",
-      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "nazwa": "kacperboch",
+      "czasPoczatek": "2022-12-09T10:26",
+      "czasKoniec": "2022-12-15T10:26",
       "id": 2
+    },
+    {
+      "nazwa": "Kacper Bochan",
+      "czasPoczatek": "2022-11-03T10:38",
+      "czasKoniec": "2022-12-02T10:38",
+      "id": 3
+    },
+    {
+      "nazwa": "kacperboch",
+      "czasPoczatek": "2022-11-29T01:41",
+      "czasKoniec": "2022-12-09T10:41",
+      "id": 4
     }
   ],
   "zadania": [
@@ -19,16 +31,36 @@
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
-      "wolontariuszeObecni": 2,
+      "eventId": 0,
+      "przydzieleniId": [],
       "id": 1
+    },
+    {
+      "nazwa": "Zamiatanie",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "wolontariuszeWymagani": 2,
+      "eventId": 0,
+      "przydzieleniId": [],
+      "id": 2
     },
     {
       "nazwa": "Stephen",
       "czasPoczatek": "1970-01-01T00:00:00.000Z",
       "czasKoniec": "1970-01-01T00:00:00.000Z",
       "wolontariuszeWymagani": 2,
-      "wolontariuszeObecni": 2,
-      "id": 2
+      "eventId": 1,
+      "przydzieleniId": [],
+      "id": 3
+    },
+    {
+      "nazwa": "Stephen",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "wolontariuszeWymagani": 2,
+      "eventId": 2,
+      "przydzieleniId": [],
+      "id": 4
     }
   ],
   "wolontariusze": [
@@ -59,6 +91,27 @@
       "telefon": 666999777,
       "wiek": 18,
       "id": 4
+    },
+    {
+      "imie": "Kacper",
+      "nazwisko": "Bochan",
+      "telefon": 797979797,
+      "wiek": -1,
+      "id": 5
+    },
+    {
+      "imie": "Kacper",
+      "nazwisko": "Bochan",
+      "telefon": 771144556,
+      "wiek": -1,
+      "id": 6
+    },
+    {
+      "imie": "Kacper",
+      "nazwisko": "Bochan",
+      "telefon": 333333333,
+      "wiek": 123,
+      "id": 7
     }
   ]
 }

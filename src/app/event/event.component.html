@@ -6,7 +6,7 @@
           <div style="text-align: left;margin-top: 50px;margin-right: 0px;padding-left: 25px;"><h3>Lista Zadań</h3></div>
         </div>
         <div class="col-md">
-          <div style="text-align: right;margin-top: 50px"><button class="button" [routerLink]="['/zadanie/create']">Dodaj Zadanie</button></div>
+          <div style="text-align: right;margin-top: 50px"><button class="button" [routerLink]="['/zadanie/create/'+[eventId]]">Dodaj Zadanie</button></div>
         </div>
       </div>
     </div>
@@ -30,7 +30,6 @@
     </ng-container>
   </tbody>
   </table>
-  <button (click)="addZadanie()">Add a new zadanie</button>
 
 </div>
 </div>

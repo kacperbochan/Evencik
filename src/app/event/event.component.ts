@@ -1,6 +1,9 @@
 import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { Zadanie } from '../../types/Zadanie';
 import { ZadaniaService } from '../services/zadania/zadania.service';
+import { ActivatedRoute } from '@angular/router';
+import { EventsService } from '../services/eventy/events.service';
+import { Event } from 'src/types/Event';
 
 
 @Component({
@@ -11,10 +14,11 @@ import { ZadaniaService } from '../services/zadania/zadania.service';
 })
 export class EventComponent implements OnInit {
   zadania:Zadanie[]=[];
-  selected: number = -1;
+  eventId:number;
 
-  constructor(private zadaniaService: ZadaniaService) {
-    zadaniaService.getZadaniaAsynch().subscribe(data=>this.zadania=data);
+  constructor(private zadaniaService: ZadaniaService, private route: ActivatedRoute) {
+    this.route.params.subscribe( params=> this.eventId = params['id']);
+    zadaniaService.getZadaniaAsynch().subscribe(data=>this.zadania=data.filter(x=>x.eventId==this.eventId));
   }
 
   /*Events = new Array(
@@ -30,7 +34,9 @@ export class EventComponent implements OnInit {
   ngOnInit() {}
 
   addZadanie() {
-    const zadanie = new Zadanie('Stephen',2 ,2, new Date(0), new Date(0));
+    const zadanie = new Zadanie('Stephen',2 ,2, new Date(0), new Date(0), this.eventId);
+    zadanie.przydzieleniId=[];
+    console.log(zadanie);
     this.zadaniaService.addZadanie(zadanie).subscribe(ret => this.zadania.push(zadanie));
   }
 

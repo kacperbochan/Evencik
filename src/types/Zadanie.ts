@@ -9,7 +9,10 @@ export class Zadanie implements IZadanie {
   private _wolontariuszeObecni: number;
   private _wolontariuszeWymagani: number;
 
-  constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0)){
+  private _eventId: number;
+  private _przydzieleniId: number[];
+
+  constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0), eventId = -1){
       this._nazwa = nazwa;
 
       this._czasPoczatek = new Date(poczatek);
@@ -18,12 +21,14 @@ export class Zadanie implements IZadanie {
       this._wolontariuszeWymagani = wymagani;
       this._wolontariuszeObecni = obecni;
 
+      this._eventId = eventId;
+      this._przydzieleniId = [];
   }
+
 
   public get nazwa() : string {
       return this._nazwa;
   }
-
   public set nazwa(nazwa:string){
       this._nazwa = nazwa;
   }
@@ -31,7 +36,6 @@ export class Zadanie implements IZadanie {
   public set wolontariuszeObecni(obecni:number){
     this._wolontariuszeObecni = obecni;
   }
-
   public get wolontariuszeObecni() : number {
     return this._wolontariuszeObecni;
   }
@@ -39,7 +43,6 @@ export class Zadanie implements IZadanie {
   public set wolontariuszeWymagani(wymagani:number){
     this._wolontariuszeWymagani = wymagani;
   }
-
   public get wolontariuszeWymagani() : number {
     return this._wolontariuszeWymagani;
   }
@@ -58,4 +61,17 @@ export class Zadanie implements IZadanie {
     return this._czasKoniec;
   }
 
+  public get eventId(): number{
+    return this._eventId;
+  }
+
+  public get przydzieleniId(): number[]{
+    return this.przydzieleniId;
+  }
+  public get przydzieleniIlosc(): number{
+    return this.przydzieleniId.length;
+  }
+  public set przydzieleniId(przydzieleniId:number[]){
+    this._przydzieleniId = przydzieleniId;
+  }
 }

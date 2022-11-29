@@ -11,15 +11,15 @@
       {{zadanie.czasKoniec | date}}
   </td>
 <td class="volu">
-    {{zadanie.wolontariuszeObecni}}
+    {{zadanie.przydzieleniId.length}}
   /
     {{zadanie.wolontariuszeWymagani}}
 </td>
 <td class="state">
-  <b style="Color: green; vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni >= zadanie.wolontariuszeWymagani">
+  <b style="Color: green; vertical-align: middle;font-size: 25px;" *ngIf="zadanie.przydzieleniId.length >= zadanie.wolontariuszeWymagani">
     ✓
   </b>
-  <b style="Color: red;vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni < zadanie.wolontariuszeWymagani">
+  <b style="Color: red;vertical-align: middle;font-size: 25px;" *ngIf="zadanie.przydzieleniId.length < zadanie.wolontariuszeWymagani">
     X
   </b>
 </td>

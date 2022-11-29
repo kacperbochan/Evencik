@@ -5,13 +5,16 @@ export class ZadanieMap implements IZadanie {
   czasPoczatek: Date;
   czasKoniec: Date;
   wolontariuszeWymagani: number;
-  wolontariuszeObecni: number;
+  eventId: number;
+  przydzieleniId: number[];
 
   constructor(zadanie:IZadanie){
     this.nazwa=zadanie.nazwa,
     this.czasPoczatek = zadanie.czasPoczatek,
     this.czasKoniec = zadanie.czasKoniec,
     this.wolontariuszeWymagani = zadanie.wolontariuszeWymagani,
-    this.wolontariuszeObecni = zadanie.wolontariuszeObecni
+    this.eventId = zadanie.eventId;
+    this.przydzieleniId = zadanie.przydzieleniId;
+
   }
 }
