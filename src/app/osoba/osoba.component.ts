@@ -8,31 +8,12 @@ import { Wolontariusz } from '../../types/Wolontariusz';
 })
 export class OsobaComponent implements OnInit {
 
-  edit:boolean = false;
   @Input() wolontariusz: Wolontariusz;
   @Input() id: number;
-  copy: Wolontariusz;
 
   constructor() {
   }
 
-  ngOnInit(): void {
-    this.copy=new Wolontariusz("jurek","koks",690420420,28)
-  }
+  ngOnInit(): void { }
 
-  switchEdit(): void{
-    this.copy.Copy(this.wolontariusz);
-    this.edit = true;
-  }
-  save(){
-    this.edit = false;
-  }
-  cancel(){
-    this.wolontariusz.Copy(this.copy) ;
-    this.edit=false;
-  }
-
-  verifyData(formValues: object): void {
-
-  }
 }
