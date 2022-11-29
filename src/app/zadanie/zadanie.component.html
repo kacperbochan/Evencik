@@ -1,0 +1,52 @@
+﻿<td class="index">
+  {{zadanie.indeks}}
+</td>
+<td class="name" [class.edit]="this.edit">
+  <textarea *ngIf="this.edit" [(ngModel)]="zadanie.nazwa" #name="ngModel" ngModel required></textarea>
+  <span *ngIf="!this.edit">
+    {{zadanie.nazwa}}
+  </span>
+</td>
+<td class="date">
+  <b>Start:</b>
+    <input type="date" *ngIf="this.edit" [(ngModel)]="zadanie.czasPoczatek" />
+    <span *ngIf="!this.edit">
+      {{zadanie.czasPoczatek | date}}
+    </span>
+    <b>End:</b>
+    <input type="date" *ngIf="this.edit" [(ngModel)]="zadanie.czasKoniec" />
+    <span *ngIf="!this.edit">
+      {{zadanie.czasKoniec | date}}
+    </span>
+  </td>
+<td class="volu">
+  <input type="number" *ngIf="this.edit" [(ngModel)]="zadanie.wolontariuszeObecni" />
+  <span *ngIf="!this.edit">
+    {{zadanie.wolontariuszeObecni}}
+  </span>
+  /
+  <input type="number" *ngIf="this.edit" [(ngModel)]="zadanie.wolontariuszeWymagani" />
+  <span *ngIf="!this.edit">
+    {{zadanie.wolontariuszeWymagani}}
+  </span>
+</td>
+<td class="state">
+  <span *ngIf="this.edit">
+    <b style="Color: grey;">
+      ?
+    </b>
+  </span>
+  <span *ngIf="!this.edit">
+    <b style="Color: green; vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni >= zadanie.wolontariuszeWymagani">
+      ✓
+    </b>
+    <b style="Color: red;vertical-align: middle;font-size: 25px;" *ngIf="zadanie.wolontariuszeObecni < zadanie.wolontariuszeWymagani">
+      X
+    </b>
+  </span>
+</td>
+<td class="control">
+  <button class="button" *ngIf="this.edit" (click)="save()">Zapisz</button>
+  <button class="button" *ngIf="this.edit" (click)="cancel()">Cofnij</button>
+  <button class="button" *ngIf="!this.edit" (click)="switchEdit()">Edytuj</button>
+</td>

@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { ZadanieComponent } from './zadanie/zadanie.component';
 import { EventComponent } from './event/event.component';
 import { FormsModule } from '@angular/forms';
+import { NavbarComponent } from './navbar/navbar.component';
+import { WolontariuszeComponent } from './wolontariusze/wolontariusze.component';
+import { OsobaComponent } from './osoba/osoba.component';
 import { WolontariuszEditComponent } from './forms/wolontariusz/wolontariusz-edit/wolontariusz-edit.component';
 import { WolontariuszCreateComponent } from './forms/wolontariusz/wolontariusz-create/wolontariusz-create.component';
 import { EventCreateComponent } from './forms/event/event-create/event-create.component';
@@ -20,6 +23,10 @@ import { HttpClientModule } from '@angular/common/http';
   declarations: [
     AppComponent,
     ZadanieComponent,
+    EventComponent,
+    NavbarComponent,
+    WolontariuszeComponent,
+    OsobaComponent
     EventComponent,
     WolontariuszEditComponent,
     WolontariuszCreateComponent,
@@ -44,6 +51,11 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'wolontariusz/edit', component: WolontariuszEditComponent },
       { path: 'zadanie/create', component: ZadanieCreateComponent },
       { path: 'zadanie/edit', component: ZadanieEditComponent },
+    ])
+    FormsModule,
+    RouterModule.forRoot([
+      { path: '', component: EventComponent, pathMatch: 'full' },
+      { path: 'Wolo', component: WolontariuszeComponent },
     ])
   ],
   providers: [],
