@@ -2,6 +2,7 @@ import { Wolontariusz } from './../../../../types/Wolontariusz';
 import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag-drop';
 import { Component, OnInit } from '@angular/core';
 import { WolontariuszeService } from 'src/app/services/wolontariusze/wolontariusze.service';
+import { ActivatedRoute } from '@angular/router';
 
 @Component({
   selector: 'app-zadanie-create',
@@ -16,11 +17,15 @@ export class ZadanieCreateComponent implements OnInit {
   wszyscyWolo:Wolontariusz[]=[];
   przypisaniWolo:Wolontariusz[]=[];
 
+  eventId:number;
 
-  constructor(private woloService: WolontariuszeService) {
+
+  constructor(private woloService: WolontariuszeService, private route: ActivatedRoute) {
     woloService.getWolontariuszeAsynch().subscribe(data=>data.map(osoba=>{
     this.wszyscy.push(osoba.imie);
     this.wszyscyWolo.push(osoba)}));
+
+    this.route.params.subscribe( params=> this.eventId = params['id']);
    }
 
   ngOnInit(): void {
