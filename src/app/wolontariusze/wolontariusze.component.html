@@ -1,8 +1,8 @@
 <body>
     <div style="margin: 2%;">
   <div style="text-align: left;margin-top: 50px;"><h3>Wydarzenia</h3></div>
-  
-  
+
+
   <div>
   <table class="table table-bordered">
     <thead>
@@ -17,7 +17,7 @@
     </thead>
     <tbody>
       <ng-container>
-        <tr app-osoba *ngFor="let wolontariusz of Wolos" [wolontariusz]="wolontariusz"></tr>
+        <tr app-osoba *ngFor="let wolontariusz of Wolos; index as id" [wolontariusz]="wolontariusz" [id]="id"></tr>
       </ng-container>
     </tbody>
   </table>

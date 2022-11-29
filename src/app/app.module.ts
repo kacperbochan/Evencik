@@ -26,8 +26,7 @@ import { HttpClientModule } from '@angular/common/http';
     EventComponent,
     NavbarComponent,
     WolontariuszeComponent,
-    OsobaComponent
-    EventComponent,
+    OsobaComponent,
     WolontariuszEditComponent,
     WolontariuszCreateComponent,
     EventCreateComponent,
@@ -47,15 +46,11 @@ import { HttpClientModule } from '@angular/common/http';
       { path: 'event', component: EventComponent },
       { path: 'event/create', component: EventCreateComponent },
       { path: 'event/edit', component: EventEditComponent },
-      { path: 'wolontariusz/create', component: WolontariuszCreateComponent },
-      { path: 'wolontariusz/edit', component: WolontariuszEditComponent },
+      { path: 'wolo/create', component: WolontariuszCreateComponent },
+      { path: 'wolo/edit', component: WolontariuszEditComponent },
       { path: 'zadanie/create', component: ZadanieCreateComponent },
       { path: 'zadanie/edit', component: ZadanieEditComponent },
-    ])
-    FormsModule,
-    RouterModule.forRoot([
-      { path: '', component: EventComponent, pathMatch: 'full' },
-      { path: 'Wolo', component: WolontariuszeComponent },
+      { path: 'wolo', component: WolontariuszeComponent },
     ])
   ],
   providers: [],

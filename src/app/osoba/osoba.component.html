@@ -1,34 +1,19 @@
 <td class="index">
-    {{wolontariusz.indeks}}
+  {{id}}
   </td>
   <td class="name" [class.edit]="this.edit">
-    <textarea *ngIf="this.edit" [(ngModel)]="wolontariusz.imie" #name="ngModel" ngModel required></textarea>
-    <span *ngIf="!this.edit">
       {{wolontariusz.imie}}
-    </span>
   </td>
   <td class="name" [class.edit]="this.edit">
-    <textarea *ngIf="this.edit" [(ngModel)]="wolontariusz.nazwisko" #name="ngModel" ngModel required></textarea>
-    <span *ngIf="!this.edit">
       {{wolontariusz.nazwisko}}
-    </span>
   </td>
   <td class="volu">
-    <input type="number" *ngIf="this.edit" [(ngModel)]="wolontariusz.telefon" />
-    <span *ngIf="!this.edit">
       {{wolontariusz.telefon}}
-    </span>
-   </td>
-   <td class="volu">
-    <input type="number" *ngIf="this.edit" [(ngModel)]="wolontariusz.wiek" />
-    <span *ngIf="!this.edit">
+  </td>
+  <td class="volu">
       {{wolontariusz.wiek}}
-    </span>
   </td>
 
   <td class="control">
-    <button class="button" *ngIf="this.edit" (click)="save()">Zapisz</button>
-    <button class="button" *ngIf="this.edit" (click)="cancel()">Cofnij</button>
-    <button class="button" *ngIf="!this.edit" (click)="switchEdit()">Edytuj</button>
+    <button class="button" [routerLink]="['/wolo/edit']">Edytuj</button>
   </td>
-  

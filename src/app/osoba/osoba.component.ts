@@ -10,6 +10,7 @@ export class OsobaComponent implements OnInit {
 
   edit:boolean = false;
   @Input() wolontariusz: Wolontariusz;
+  @Input() id: number;
   copy: Wolontariusz;
 
   constructor() {
