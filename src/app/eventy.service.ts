@@ -29,6 +29,7 @@ export class EventyService {
 
 
   addEvent(event: Event): Observable<Event> {
+    console.log(event);
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };

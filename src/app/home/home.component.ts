@@ -21,6 +21,8 @@ export class HomeComponent implements OnInit {
   );
   */
 
+
+
   constructor(private eventyService: EventyService) {
     eventyService.getEventyAsynch().subscribe(data=>this.eventy=data);
   }
@@ -30,6 +32,12 @@ export class HomeComponent implements OnInit {
 
   selectZadanie(i:number):void{
     this.selected = i;
+  }
+
+  addEvent() {
+    const event = new Event("Gwiazdy nocą");
+    this.eventyService.addEvent(event).subscribe(ret => this.eventy.push(event));
+
   }
 
 }

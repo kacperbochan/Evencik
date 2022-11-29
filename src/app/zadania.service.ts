@@ -30,6 +30,7 @@ export class ZadaniaService {
 
 
   addZadanie(zadanie: Zadanie): Observable<Zadanie> {
+    console.log(zadanie);
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
