@@ -10,8 +10,10 @@
       <th>Zarządzanie</th>
     </tr>
     <ng-container>
-      <tr app-zadanie *ngFor="let zadanie of Events" [zadanie]="zadanie"></tr>
+      <tr app-zadanie *ngFor="let zadanie of zadania" [zadanie]="zadanie"></tr>
     </ng-container>
 
   </table>
+  <button (click)="addZadanie()">Add a new zadanie</button>
+
 </div>
