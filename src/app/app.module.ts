@@ -9,6 +9,8 @@ import { FormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WolontariuszeComponent } from './wolontariusze/wolontariusze.component';
 import { OsobaComponent } from './osoba/osoba.component';
+import { HomeComponent } from './home/home.component';
+import { EventsComponent } from './events/events.component';
 
 @NgModule({
   declarations: [
@@ -17,14 +19,17 @@ import { OsobaComponent } from './osoba/osoba.component';
     EventComponent,
     NavbarComponent,
     WolontariuszeComponent,
-    OsobaComponent
+    OsobaComponent,
+    HomeComponent,
+    EventsComponent
   ],
   imports: [
     BrowserModule,
     FormsModule,
     RouterModule.forRoot([
-      { path: '', component: EventComponent, pathMatch: 'full' },
+      { path: '', component: HomeComponent, pathMatch: 'full' },
       { path: 'Wolo', component: WolontariuszeComponent },
+      { path: 'secret', component: EventComponent },
     ])
   ],
   providers: [],

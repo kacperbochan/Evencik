@@ -8,16 +8,14 @@
     <thead>
       <tr>
         <th scope="col">ID</th>
-        <th scope="col">Imie</th>
-        <th scope="col">Nazwisko</th>
-        <th scope="col">Telefon</th>
-        <th scope="col">Wiek</th>
+        <th scope="col">Nazwa</th>
+        <th scope="col">Data</th>
         <th scope="col">Zarządzanie</th>
       </tr>
     </thead>
     <tbody>
       <ng-container>
-        <tr app-osoba *ngFor="let wolontariusz of Wolos" [wolontariusz]="wolontariusz"></tr>
+        <tr app-events *ngFor="let event of EventsList" [event]="event"></tr>
       </ng-container>
     </tbody>
   </table>
