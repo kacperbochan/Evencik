@@ -10,7 +10,7 @@ export class ZadanieComponent implements OnInit {
 
   edit:boolean = false;
   @Input() zadanie: Zadanie;
-
+  @Input() id: number;
   copy: Zadanie;
 
   constructor() {

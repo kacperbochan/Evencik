@@ -1,19 +1,28 @@
-<div id="title"><h1>Event</h1></div>
-<div>
-  <table>
-    <tr>
-      <th>ID</th>
-      <th>Nazwa</th>
-      <th>Data</th>
-      <th>Wolontariusze</th>
-      <th>Dość<br/>wolontariuszy</th>
-      <th>Zarządzanie</th>
-    </tr>
-    <ng-container>
-      <tr app-zadanie *ngFor="let zadanie of zadania" [zadanie]="zadanie"></tr>
-    </ng-container>
+<body>
+  <div style="margin: 2%;">
+<div style="text-align: left;margin-top: 50px;"><h3>Wydarzenia</h3></div>
 
+
+<div>
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th scope="col">ID</th>
+      <th scope="col">Nazwa</th>
+      <th scope="col">Data</th>
+      <th scope="col">Wolontariusze</th>
+      <th scope="col">Dość<br/>wolontariuszy</th>
+      <th scope="col">Zarządzanie</th>
+    </tr>
+  </thead>
+  <tbody>
+    <ng-container>
+      <tr app-zadanie *ngFor="let zadanie of zadania; index as id" [zadanie]="zadanie" [id]="id"></tr>
+    </ng-container>
+  </tbody>
   </table>
   <button (click)="addZadanie()">Add a new zadanie</button>
 
 </div>
+</div>
+</body>

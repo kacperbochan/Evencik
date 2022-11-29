@@ -4,4 +4,5 @@
 
 /.angular/cache/14.2.6
 /.vs
-/node_modules/.cli-ngcc
+/node_modules/
+
