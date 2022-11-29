@@ -7,7 +7,7 @@ import { Wolontariusz } from 'src/types/Wolontariusz';
 @Component({
   selector: 'app-wolontariusz-create',
   templateUrl: './wolontariusz-create.component.html',
-  styleUrls: ['./wolontariusz-create.component.css']
+  styleUrls: ['./wolontariusz-create.component.css','../../style.css']
 })
 export class WolontariuszCreateComponent implements OnInit {
 

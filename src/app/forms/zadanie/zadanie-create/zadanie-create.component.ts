@@ -6,7 +6,7 @@ import { WolontariuszeService } from 'src/app/services/wolontariusze/wolontarius
 @Component({
   selector: 'app-zadanie-create',
   templateUrl: './zadanie-create.component.html',
-  styleUrls: ['./zadanie-create.component.css']
+  styleUrls: ['./zadanie-create.component.css','../../style.css']
 })
 export class ZadanieCreateComponent implements OnInit {
 

@@ -7,7 +7,7 @@ import { EventsService } from 'src/app/services/eventy/events.service';
 @Component({
   selector: 'app-event-create',
   templateUrl: './event-create.component.html',
-  styleUrls: ['./event-create.component.css']
+  styleUrls: ['./event-create.component.css','../../style.css']
 })
 export class EventCreateComponent implements OnInit {
 

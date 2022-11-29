@@ -23,6 +23,24 @@
       "czasPoczatek": "2022-11-29T01:41",
       "czasKoniec": "2022-12-09T10:41",
       "id": 4
+    },
+    {
+      "nazwa": "Nowe Wydarzenie",
+      "czasPoczatek": "2022-11-12T14:27",
+      "czasKoniec": "2022-12-01T14:27",
+      "id": 5
+    },
+    {
+      "nazwa": "ZUZU",
+      "czasPoczatek": "2022-12-09T14:27",
+      "czasKoniec": "2022-12-10T14:27",
+      "id": 6
+    },
+    {
+      "nazwa": "jjjjj",
+      "czasPoczatek": "2022-11-04T15:10",
+      "czasKoniec": "2022-11-05T15:10",
+      "id": 7
     }
   ],
   "zadania": [
@@ -112,6 +130,13 @@
       "telefon": 333333333,
       "wiek": 123,
       "id": 7
+    },
+    {
+      "imie": "Kacper",
+      "nazwisko": "Bochan",
+      "telefon": 999999999,
+      "wiek": 14,
+      "id": 8
     }
   ]
 }

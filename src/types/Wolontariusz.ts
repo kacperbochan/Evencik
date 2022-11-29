@@ -10,6 +10,7 @@ export class Wolontariusz implements IWolontariusz {
   private _nazwisko: string;
   private _telefon: number;
   private _wiek: number;
+  private _dorosly?:boolean;
 
   constructor(imie:string="",nazwisko:string="",telefon:number=-1,wiek:number=-1){
     // if(wiek===-1){

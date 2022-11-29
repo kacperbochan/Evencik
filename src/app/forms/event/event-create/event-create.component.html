@@ -12,7 +12,7 @@
           <div class="col-sm-12">
             <label for="name" class="form-label">Nazwa</label>
             <input type="text" formControlName="name" class="form-control" id="name" placeholder="WaterStock" value="" required>
-            <div class="invalid-feedback">
+            <div *ngIf="name?.invalid && name?.dirty" class="invalid-feedback">
               Podaj prawidłową nazwę event-u
             </div>
           </div>
@@ -21,19 +21,25 @@
             <label for="startDate" class="form-label">Początek</label>
             <div class="input-group has-validation">
               <input type="datetime-local" formControlName="startDate" class="form-control" id="startDate" required>
-            <div class="invalid-feedback">
-                Podano nieprawidłową datę początkową
-              </div>
             </div>
+            <div *ngIf="startDate?.invalid && startDate?.dirty" class="invalid-feedback">
+                Podano nieprawidłową datę początkową
+            </div>
+
           </div>
 
           <div class="col-6">
             <label for="endDate" class="form-label">Koniec</label>
             <div class="input-group has-validation">
               <input type="datetime-local" formControlName="endDate" class="form-control" id="endDate" required>
-            <div class="invalid-feedback">
-                Podano nieprawidłową datę końcową
-              </div>
+            </div>
+            <div *ngIf="endDate?.dirty">
+            <div *ngIf="endDate?.invalid" class="invalid-feedback">
+              Podano nieprawidłową datę końcową
+            </div>
+            <div *ngIf="endDate?.value<startDate?.value" class="invalid-feedback">
+              Data końcowa powinna być większa od początkowej 😉
+            </div>
             </div>
           </div>
 

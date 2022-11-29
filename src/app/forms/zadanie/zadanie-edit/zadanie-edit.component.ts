@@ -6,7 +6,7 @@ import { Wolontariusz } from 'src/types/Wolontariusz';
 @Component({
   selector: 'app-zadanie-edit',
   templateUrl: './zadanie-edit.component.html',
-  styleUrls: ['./zadanie-edit.component.css']
+  styleUrls: ['./zadanie-edit.component.css','../../style.css']
 })
 export class ZadanieEditComponent implements OnInit {
 

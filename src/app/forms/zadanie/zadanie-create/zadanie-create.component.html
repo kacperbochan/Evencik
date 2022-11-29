@@ -12,7 +12,7 @@
           <div class="col-sm-12">
             <label for="name" class="form-label">Nazwa</label>
             <input type="text" class="form-control" id="name" placeholder="zadanie-1" value="" required>
-            <div class="invalid-feedback">
+            <div *ngIf="name?.invalid && name?.dirty" class="invalid-feedback">
               Podano nieprawidłową nazwę
             </div>
           </div>
