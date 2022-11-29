@@ -12,26 +12,30 @@ export class EventComponent implements OnInit {
   zadania:Zadanie[]=[];
   selected: number = -1;
 
-  constructor(zadaniaService: ZadaniaService) {
+  constructor(private zadaniaService: ZadaniaService) {
     zadaniaService.getZadaniaAsynch().subscribe(data=>this.zadania=data);
   }
 
-  Events = new Array(
+  /*Events = new Array(
     new Zadanie("Zamieść scenę", 3),
     new Zadanie("Ogarnąć pare kabli", 2, 2),
     new Zadanie("Kupić pizzę", 2,1),
     new Zadanie("Wyciścić WC"),
     new Zadanie("Zrób salto")
   );
+*/
 
 
-
-  ngOnInit() {
-    console.log("Zadania", this.zadania.length,this.zadania);
-  }
+  ngOnInit() {}
 
   selectZadanie(i:number):void{
     this.selected = i;
+  }
+
+  addZadanie() {
+    const zadanie = new Zadanie("Ogarnąć pare kabli", 2, 2);
+    this.zadaniaService.addZadanie(zadanie).subscribe(ret => this.zadania.push(zadanie));
+
   }
 
 }

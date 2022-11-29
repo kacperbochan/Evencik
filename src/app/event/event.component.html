@@ -17,10 +17,13 @@
   </thead>
   <tbody>
     <ng-container>
+      <tr app-zadanie *ngFor="let zadanie of zadania" [zadanie]="zadanie"></tr>
       <tr app-zadanie *ngFor="let zadanie of Events; index as id" [zadanie]="zadanie" [id]="id"></tr>
     </ng-container>
   </tbody>
-</table>
+  </table>
+  <button (click)="addZadanie()">Add a new zadanie</button>
+
 </div>
 </div>
 </body>
