@@ -56,7 +56,7 @@ import { EventsComponent } from './events/events.component';
       { path: 'zadanie/create', component: ZadanieCreateComponent },
       { path: 'zadanie/edit', component: ZadanieEditComponent },
       { path: 'wolo', component: WolontariuszeComponent },
-      { path: 'secret', component: EventComponent },
+      { path: 'zadanie', component: EventComponent },
     ])
   ],
   providers: [],

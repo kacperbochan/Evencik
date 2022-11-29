@@ -2,7 +2,7 @@ td{
     position: relative;
     min-width: 50px;
     height: 50px;
-    background-color: #edd2e0;
+    background-color: #bce4fd;
     padding: 5px
   }
   .index, .state{
@@ -35,7 +35,7 @@ td{
     right: 0;
     bottom: 0;
     left: 0;
-  
+
     resize: vertical;
     min-width: 100px;
     min-height: 50px;
@@ -48,9 +48,9 @@ td{
     width:110px;
     text-align: center;
   }
-  
+
   .button {
-    background-color: #DBABBE; /* Green */
+    background-color: #5a8dea; /* Green */
     width: 120px;
     border: none;
     color: white;
@@ -61,5 +61,4 @@ td{
     font-size: 16px;
     margin: 4px;
   }
-  
-  
+

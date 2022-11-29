@@ -6,12 +6,12 @@
             <div style="text-align: left;margin-top: 50px;margin-right: 0px;padding-left: 25px;"><h3>Wolontariusze</h3></div>
           </div>
           <div class="col-md">
-            <div style="text-align: right;margin-top: 50px"><button class="button">Dodaj Wolontariusza</button></div>
+            <div style="text-align: right;margin-top: 50px"><button class="button" [routerLink]="['/wolo/create']">Dodaj Wolontariusza</button></div>
           </div>
         </div>
       </div>
-  
-  
+
+
   <div>
   <table class="table table-bordered">
     <thead>
@@ -26,10 +26,11 @@
     </thead>
     <tbody>
       <ng-container>
-        <tr app-osoba *ngFor="let wolontariusz of Wolos; index as id" [wolontariusz]="wolontariusz" [id]="id"></tr>
+        <tr app-osoba *ngFor="let wolontariusz of wolontariusze; index as id" [wolontariusz]="wolontariusz" [id]="id"></tr>
       </ng-container>
     </tbody>
   </table>
+  <button (click)="addWolontariusz()">Add a new wolo</button>
   </div>
   </div>
   </body>

@@ -1,8 +1,10 @@
+import { ZadanieMap } from 'src/types/Maps/ZadanieMap';
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Zadanie } from '../types/Zadanie';
+import { Zadanie } from '../../../types/Zadanie';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
+import { IZadanie } from 'src/types/Interfaces/IZadanie';
 
 @Injectable({
   providedIn: 'root'
@@ -11,7 +13,6 @@ import { HttpClient, HttpHeaders } from '@angular/common/http';
 export class ZadaniaService {
   zadania:Zadanie[]=[];
   private url = 'http://localhost:3000/zadania';
-
 
   constructor(private http: HttpClient) {
   }
@@ -28,15 +29,21 @@ export class ZadaniaService {
     );
   }
 
+  private handleError<T>(operation = 'operation', result?: T) {
+    return (error: any): Observable<T> => {
+      console.error(operation + ' failed' + error);
+      return of(result as T);
+    };
+  }
 
-  addZadanie(zadanie: Zadanie): Observable<Zadanie> {
-    console.log(zadanie);
+  addZadanie(zadanie: Zadanie): Observable<IZadanie> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.post<Zadanie>(this.url, zadanie, httpOptions)
+
+    return this.http.post<ZadanieMap>(this.url, new ZadanieMap(zadanie), httpOptions)
       .pipe(
-        catchError(this.handleError<Zadanie>('addZadanie'))
+        catchError(this.handleError<ZadanieMap>('addZadanie'))
       );
   }
 
@@ -44,12 +51,5 @@ export class ZadaniaService {
     this.zadania[nr]=editedZadanie;
   }
 
-
-  private handleError<T>(operation = 'operation', result?: T) {
-    return (error: any): Observable<T> => {
-      console.error(operation + ' failed' + error);
-      return of(result as T);
-    };
-  }
 
 }
