@@ -15,14 +15,6 @@ export class ZadaniaService {
   private url = 'http://localhost:3000/zadania';
 
   constructor(private http: HttpClient) {
-    /*
-    this.zadania.push(new Zadanie("wypuść kota", 3, 2 ))
-    this.zadania.push(new Zadanie("Zamieść scenę", 3)),
-    this.zadania.push(new Zadanie("Ogarnąć pare kabli", 2, 2)),
-    this.zadania.push(new Zadanie("Kupić pizzę", 2,1)),
-    this.zadania.push(new Zadanie("Wyciścić WC")),
-    this.zadania.push(new Zadanie("Zrób salto"))
-    */
   }
 
   getZadaniaSynch():Zadanie[]{
@@ -53,6 +45,10 @@ export class ZadaniaService {
       .pipe(
         catchError(this.handleError<ZadanieMap>('addZadanie'))
       );
+  }
+
+  editZadanie(editedZadanie: Zadanie, nr:number):void{
+    this.zadania[nr]=editedZadanie;
   }
 
 

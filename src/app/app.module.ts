@@ -1,5 +1,5 @@
 import { DragDropModule } from '@angular/cdk/drag-drop';
-import { NgModule } from '@angular/core';
+import { NgModule, LOCALE_ID } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { RouterModule } from '@angular/router';
 
@@ -20,6 +20,8 @@ import { ScrollingModule } from '@angular/cdk/scrolling';
 import { HttpClientModule } from '@angular/common/http';
 import { HomeComponent } from './home/home.component';
 import { EventsComponent } from './events/events.component';
+import { MyDirectiveDirective } from './my-directive.directive';
+import { PlDatePipe } from './pl-date.pipe';
 
 @NgModule({
   declarations: [
@@ -37,7 +39,9 @@ import { EventsComponent } from './events/events.component';
     ZadanieCreateComponent,
     OsobaComponent,
     HomeComponent,
-    EventsComponent
+    EventsComponent,
+    MyDirectiveDirective,
+    PlDatePipe
   ],
   imports: [
     BrowserModule,
@@ -60,7 +64,7 @@ import { EventsComponent } from './events/events.component';
       { path: 'zadanie', component: EventComponent },
     ])
   ],
-  providers: [],
+  providers: [{ provide: LOCALE_ID, useValue: 'pl' }],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

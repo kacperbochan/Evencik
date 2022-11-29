@@ -8,7 +8,7 @@ import { EventsService } from '../services/eventy/events.service';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  eventy: Event[];
   selected: number = -1;
   events: Event[]=[];
 
@@ -31,5 +31,6 @@ export class HomeComponent implements OnInit {
     const event = new Event('Stephen', new Date(0), new Date(0) );
     this.eventService.addEvent(event).subscribe(ret => this.events.push(event));
   }
+
 
 }

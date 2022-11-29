@@ -14,7 +14,7 @@ import { Event } from 'src/types/Event';
 })
 export class EventComponent implements OnInit {
   zadania:Zadanie[]=[];
-  eventId:number;
+  eventId:number = -1;
 
   constructor(private zadaniaService: ZadaniaService, private route: ActivatedRoute) {
     this.route.params.subscribe( params=> this.eventId = params['id']);
@@ -39,5 +39,6 @@ export class EventComponent implements OnInit {
     console.log(zadanie);
     this.zadaniaService.addZadanie(zadanie).subscribe(ret => this.zadania.push(zadanie));
   }
+
 
 }
