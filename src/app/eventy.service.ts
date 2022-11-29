@@ -1,46 +1,41 @@
 import { Injectable } from '@angular/core';
 import { Observable, of } from 'rxjs';
-import { Zadanie } from '../types/Zadanie';
+import { Event } from '../types/Event';
 import { catchError } from 'rxjs/operators';
 import { HttpClient, HttpHeaders } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-
-export class ZadaniaService {
-  zadania:Zadanie[]=[];
-  private url = 'http://localhost:3000/zadania';
+export class EventyService {
+  eventy:Event[]=[];
+  private url = 'http://localhost:3000/eventy';
 
 
   constructor(private http: HttpClient) {
   }
 
-  getZadaniaSynch():Zadanie[]{
-    return this.zadania;
+  getEventySynch():Event[]{
+    return this.eventy;
   }
 
-  getZadaniaAsynch():Observable<Zadanie[]>{
+  getEventyAsynch():Observable<Event[]>{
     //return of(this.zadania);
-    return this.http.get<Zadanie[]>(this.url)
+    return this.http.get<Event[]>(this.url)
     .pipe(
-      catchError(this.handleError<Zadanie[]>('getZadanie', []))
+      catchError(this.handleError<Event[]>('getEvent', []))
     );
   }
 
 
-  addZadanie(zadanie: Zadanie): Observable<Zadanie> {
+  addEvent(event: Event): Observable<Event> {
     const httpOptions = {
       headers: new HttpHeaders({ 'Content-Type': 'application/json' })
     };
-    return this.http.post<Zadanie>(this.url, zadanie, httpOptions)
+    return this.http.post<Event>(this.url, event, httpOptions)
       .pipe(
-        catchError(this.handleError<Zadanie>('addZadanie'))
+        catchError(this.handleError<Event>('addEvent'))
       );
-  }
-
-  editZadanie(editedZadanie: Zadanie, nr:number):void{
-    this.zadania[nr]=editedZadanie;
   }
 
 

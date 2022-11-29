@@ -67,6 +67,24 @@
         "telefon": 534653385,
         "wiek": 12
       }
+  ],
+
+  "eventy": [
+    {
+      "nazwa": "Rockowa Scena",
+      "czasPoczatek": "2022.12.06",
+      "czasKoniec": "2022.12.07"
+    },
+    {
+      "nazwa": "Strefa Kultury Studenckiej",
+      "czasPoczatek": "2023.10.06",
+      "czasKoniec": "2023.10.08"
+    },
+    {
+      "nazwa": "Pizza Party",
+      "czasPoczatek": "2022.11.30",
+      "czasKoniec": "2022.12.01"
+    }
 
   ]
 

@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../../types/Event';
+import { EventyService } from '../eventy.service';
 
 @Component({
   selector: 'app-home',
@@ -7,9 +8,10 @@ import { Event } from '../../types/Event';
   styleUrls: ['./home.component.css']
 })
 export class HomeComponent implements OnInit {
-
+  eventy: Event[];
   selected: number = -1;
 
+  /*
   EventsList = new Array(
     new Event("Rockowa Scena"),
     new Event("Strefa Kultury Studenckiej"),
@@ -17,8 +19,11 @@ export class HomeComponent implements OnInit {
     new Event("Czyszzcenie WC"),
     new Event("Impreza salto")
   );
+  */
 
-  constructor() { }
+  constructor(private eventyService: EventyService) {
+    eventyService.getEventyAsynch().subscribe(data=>this.eventy=data);
+  }
 
   ngOnInit(): void {
   }
