@@ -6,7 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { ZadanieComponent } from './zadanie/zadanie.component';
 import { EventComponent } from './event/event.component';
-import { FormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { NavbarComponent } from './navbar/navbar.component';
 import { WolontariuszeComponent } from './wolontariusze/wolontariusze.component';
 import { OsobaComponent } from './osoba/osoba.component';
@@ -42,6 +42,7 @@ import { EventsComponent } from './events/events.component';
   imports: [
     BrowserModule,
     FormsModule,
+    ReactiveFormsModule,
     HttpClientModule,
     DragDropModule,
     FormsModule,
