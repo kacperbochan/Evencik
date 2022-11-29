@@ -17,8 +17,7 @@
   </thead>
   <tbody>
     <ng-container>
-      <tr app-zadanie *ngFor="let zadanie of zadania" [zadanie]="zadanie"></tr>
-      <tr app-zadanie *ngFor="let zadanie of Events; index as id" [zadanie]="zadanie" [id]="id"></tr>
+      <tr app-zadanie *ngFor="let zadanie of zadania; index as id" [zadanie]="zadanie" [id]="id"></tr>
     </ng-container>
   </tbody>
   </table>
