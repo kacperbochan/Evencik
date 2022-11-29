@@ -1,6 +1,7 @@
+import { IEvent } from './Interfaces/IEvent';
 import { Zadanie } from "./Zadanie";
 
-export class Event {
+export class Event implements IEvent{
   private _nazwa: string;
   private _dataPoczatek: Date;
   private _dataKoniec: Date;

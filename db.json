@@ -1,73 +1,64 @@
 {
-  "zadania": [
+  "events": [
     {
-    "nazwa": "Ala",
-    "wolontariuszeWymagani": 3,
-    "wolontariuszeObecni": 2,
-    "czasPoczatek": "2020-10-15",
-    "czasKoniec": "2020-11-15"
+      "nazwa": "Stephen",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "id": 1
     },
     {
-    "nazwa": "ma",
-    "wolontariuszeWymagani": 4,
-    "wolontariuszeObecni": 1,
-    "czasPoczatek": "2020-12-15",
-    "czasKoniec": "2020-12-20"
-    },
-    {
-    "nazwa": "Kota",
-    "wolontariuszeWymagani": 3,
-    "wolontariuszeObecni": 3,
-    "czasPoczatek": "2020-10-15",
-    "czasKoniec": "2020-11-15"
-    },
-    {
-    "nazwa": "Dziaba",
-    "wolontariuszeWymagani": 5,
-    "wolontariuszeObecni": 2,
-    "czasPoczatek": "2020-10-15",
-    "czasKoniec": "2020-11-15"
+      "nazwa": "Stephen",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "id": 2
     }
   ],
-
+  "zadania": [
+    {
+      "nazwa": "Stephen",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "wolontariuszeWymagani": 2,
+      "wolontariuszeObecni": 2,
+      "id": 1
+    },
+    {
+      "nazwa": "Stephen",
+      "czasPoczatek": "1970-01-01T00:00:00.000Z",
+      "czasKoniec": "1970-01-01T00:00:00.000Z",
+      "wolontariuszeWymagani": 2,
+      "wolontariuszeObecni": 2,
+      "id": 2
+    }
+  ],
   "wolontariusze": [
-      {
-        "imie": "Kacper",
-        "nazwisko": "Bochan",
-        "telefon": 508672122,
-        "wiek": 22
-      },
-      {
-        "imie": "Krzysztof",
-        "nazwisko": "Szwabowski",
-        "telefon": 666999888,
-        "wiek": 21
-      },
-      {
-        "imie": "Kamila",
-        "nazwisko": "Adamska",
-        "telefon": 334147245,
-        "wiek": 23
-      },
-      {
-        "imie": "Patrycja",
-        "nazwisko": "Biryło",
-        "telefon": 467086245,
-        "wiek": 21
-      },
-      {
-        "imie": "Kamil",
-        "nazwisko": "Duda",
-        "telefon": 535846246,
-        "wiek": 25
-      },
-      {
-        "imie": "Mama",
-        "nazwisko": "Muminka",
-        "telefon": 534653385,
-        "wiek": 12
-      }
-
+    {
+      "imie": "Stephen",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 1
+    },
+    {
+      "imie": "Stephen",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 2
+    },
+    {
+      "imie": "Stephen",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 3
+    },
+    {
+      "imie": "Stephen",
+      "nazwisko": "Norman",
+      "telefon": 666999777,
+      "wiek": 18,
+      "id": 4
+    }
   ]
-
 }

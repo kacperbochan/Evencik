@@ -25,10 +25,11 @@
     </thead>
     <tbody>
       <ng-container>
-        <tr app-events *ngFor="let event of EventsList; index as id" [event]="event" [id]="id"></tr>
+        <tr app-events *ngFor="let event of events; index as id" [event]="event" [id]="id"></tr>
       </ng-container>
     </tbody>
   </table>
+  <button (click)="addEvent()">Add a new event</button>
   </div>
   </div>
   </body>

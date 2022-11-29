@@ -1,5 +1,5 @@
 <td class="index">
-  {{id}}
+  {{id+1}}
 </td>
 <td class="name">
     {{event.nazwa}}
@@ -11,5 +11,6 @@
     {{event.czasKoniec | date}}
 </td>
 <td class="control">
-  <button class="button" >Edytuj</button>
+  <button class="button"  [routerLink]="['/event']" >Wgląd</button>
+  <button class="button" [routerLink]="['/event/edit']" >Edytuj</button>
 </td>

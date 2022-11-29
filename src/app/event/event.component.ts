@@ -1,12 +1,13 @@
 import { Component, OnInit, EventEmitter  } from '@angular/core';
 import { Zadanie } from '../../types/Zadanie';
-import { ZadaniaService } from '../zadania.service';
+import { ZadaniaService } from '../services/zadania/zadania.service';
 
 
 @Component({
   selector: 'app-event',
   templateUrl: './event.component.html',
-  styleUrls: ['./event.component.css']
+  styleUrls: ['./event.component.css'],
+  providers: [ZadaniaService]
 })
 export class EventComponent implements OnInit {
   zadania:Zadanie[]=[];
@@ -28,14 +29,9 @@ export class EventComponent implements OnInit {
 
   ngOnInit() {}
 
-  selectZadanie(i:number):void{
-    this.selected = i;
-  }
-
   addZadanie() {
-    const zadanie = new Zadanie("Ogarnąć pare kabli", 2, 2);
+    const zadanie = new Zadanie('Stephen',2 ,2, new Date(0), new Date(0));
     this.zadaniaService.addZadanie(zadanie).subscribe(ret => this.zadania.push(zadanie));
-
   }
 
 }

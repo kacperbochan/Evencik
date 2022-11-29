@@ -1,4 +1,5 @@
-export class Wolontariusz {
+import { IWolontariusz } from './Interfaces/IWolontariusz';
+export class Wolontariusz implements IWolontariusz {
   //private static wolontariusze: Wolontariusz[] = []; //lista wszstkich wolontariuszy
   //private static activeAmount: number = 0; // liczba dostępnych wolontariuszy (do iteracji) [bez kopii]
   //private static amount: number = 0; // liczba stworzynych wolontariuszy [bez kopii]

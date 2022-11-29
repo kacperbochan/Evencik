@@ -1,5 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Event } from '../../types/Event';
+import { EventsService } from '../services/eventy/events.service';
 
 @Component({
   selector: 'app-home',
@@ -9,22 +10,26 @@ import { Event } from '../../types/Event';
 export class HomeComponent implements OnInit {
 
   selected: number = -1;
+  events: Event[]=[];
 
-  EventsList = new Array(
-    new Event("Rockowa Scena"),
-    new Event("Strefa Kultury Studenckiej"),
-    new Event("Pizza Party"),
-    new Event("Czyszzcenie WC"),
-    new Event("Impreza salto")
-  );
+  // EventsList = new Array(
+  //   new Event("Rockowa Scena"),
+  //   new Event("Strefa Kultury Studenckiej"),
+  //   new Event("Pizza Party"),
+  //   new Event("Czyszzcenie WC"),
+  //   new Event("Impreza salto")
+  // );
 
-  constructor() { }
+  constructor(private eventService: EventsService) {
+    eventService.getEventsAsynch().subscribe(data=>this.events=data);
+   }
 
   ngOnInit(): void {
   }
 
-  selectZadanie(i:number):void{
-    this.selected = i;
+  addEvent() {
+    const event = new Event('Stephen', new Date(0), new Date(0) );
+    this.eventService.addEvent(event).subscribe(ret => this.events.push(event));
   }
 
 }

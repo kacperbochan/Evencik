@@ -1,10 +1,11 @@
+import { IZadanie } from './Interfaces/IZadanie';
 import { Wolontariusz } from "./Wolontariusz";
 
-export class Zadanie {
+export class Zadanie implements IZadanie {
   private _nazwa: string;
   private _czasPoczatek: Date = new Date();
   private _czasKoniec: Date = new Date();
-  private _wolontariusze: Wolontariusz[];
+  //private _wolontariusze: Wolontariusz[];
   private _wolontariuszeObecni: number;
   private _wolontariuszeWymagani: number;
 
@@ -19,14 +20,6 @@ export class Zadanie {
 
   }
 
-  public copy(zad:Zadanie){
-    this._nazwa = zad.nazwa;
-    this._czasPoczatek = zad.czasPoczatek;
-    this._czasKoniec = zad.czasKoniec;
-    this._wolontariuszeObecni = zad.wolontariuszeObecni;
-    this._wolontariuszeWymagani = zad.wolontariuszeWymagani;
-  }
-
   public get nazwa() : string {
       return this._nazwa;
   }
@@ -34,7 +27,6 @@ export class Zadanie {
   public set nazwa(nazwa:string){
       this._nazwa = nazwa;
   }
-
 
   public set wolontariuszeObecni(obecni:number){
     this._wolontariuszeObecni = obecni;
