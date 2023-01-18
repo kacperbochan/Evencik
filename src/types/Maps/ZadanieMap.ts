@@ -14,8 +14,9 @@ export class ZadanieMap implements IZadanie {
     this.czasKoniec = zadanie.czasKoniec,
     this.wolontariuszeWymagani = zadanie.wolontariuszeWymagani,
     this.eventId = zadanie.eventId;
+    this.przydzieleniId =  zadanie.przydzieleniId;
+    //zadanie.przydzieleniId.forEach(x=>this.przydzieleniId.push(x));
 
-    zadanie.przydzieleniId.forEach(x=>this.przydzieleniId.push(x));
-
+    console.log(zadanie.przydzieleniId);
   }
 }

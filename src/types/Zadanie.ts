@@ -22,7 +22,7 @@ export class Zadanie implements IZadanie {
       this._wolontariuszeObecni = obecni;
 
       this._eventId = eventId;
-      this._przydzieleniId = [50];
+      this._przydzieleniId = [];
   }
 
 
@@ -66,10 +66,10 @@ export class Zadanie implements IZadanie {
   }
 
   public get przydzieleniId(): number[]{
-    return this.przydzieleniId;
+    return this._przydzieleniId;
   }
   public get przydzieleniIlosc(): number{
-    return this.przydzieleniId.length;
+    return this._przydzieleniId.length;
   }
   public set przydzieleniId(przydzieleniId:number[]){
     this._przydzieleniId = przydzieleniId;
