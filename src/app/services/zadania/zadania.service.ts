@@ -52,4 +52,10 @@ export class ZadaniaService {
   }
 
 
+  deleteZadanie(id:number):Observable<Zadanie>{
+    const newUrl = `${this.url}/${id}`;
+    return this.http.delete<Zadanie>(newUrl);
+  }
+
+
 }

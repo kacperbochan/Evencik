@@ -49,4 +49,9 @@ export class EventsService  {
 
   }
 
+  deleteEvent(id:number):Observable<Event>{
+    const newUrl = `${this.url}/${id}`;
+    return this.http.delete<Event>(newUrl);
+  }
+
 }

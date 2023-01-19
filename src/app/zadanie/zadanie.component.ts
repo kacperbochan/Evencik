@@ -1,5 +1,7 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Zadanie } from '../../types/Zadanie';
+import { ZadaniaService } from '../services/zadania/zadania.service';
+
 
 @Component({
   selector: '[app-zadanie]',
@@ -12,11 +14,20 @@ export class ZadanieComponent implements OnInit {
   @Input() zadanie: Zadanie;
   @Input() id: number;
 
-  constructor() {
+
+  constructor(private zadanieService: ZadaniaService) {
   }
 
   ngOnInit(): void {
+    console.log("zadanie: id wydarzenia " +this.zadanie.eventId);
+  }
 
+
+
+  onDelete(){
+    //window.location.reload();
+    console.log(this.zadanie.id);
+    this.zadanieService.deleteZadanie(this.zadanie.id).subscribe();
   }
 
 }

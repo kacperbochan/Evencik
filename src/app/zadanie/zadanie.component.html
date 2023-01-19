@@ -24,6 +24,6 @@
   </b>
 </td>
 <td class="control">
-  <button class="button" [routerLink]="['/zadanie/edit']">Edytuj</button>
-  <button class="button" >Usuń</button>
+  <button class="button"  [routerLink]="['/zadanie/edit']">Edytuj</button>
+  <button class="button" (click)="onDelete()">Usuń</button>
 </td>

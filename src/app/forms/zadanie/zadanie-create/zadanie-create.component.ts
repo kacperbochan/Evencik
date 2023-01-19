@@ -93,10 +93,11 @@ export class ZadanieCreateComponent implements OnInit {
   }
 
   addZadanie() {
-    let zad = new Zadanie(this.formModel.value.name,this.formModel.value.amount,this.przypisaniWolo.length,this.formModel.value.startDate,this.formModel.value.endDate,this.eventId);
+    let zad = new Zadanie(0, this.formModel.value.name,this.formModel.value.amount,this.przypisaniWolo.length,this.formModel.value.startDate,this.formModel.value.endDate,this.eventId);
     this.przypisaniWolo.forEach(x=>zad.przydzieleniId.push(x.id??0));
 
-    console.log(zad);
+    //console.log(zad);
+    console.log("addZadanie (zadanie-create) "+ this.eventId);
 
     this.zadaniaService.addZadanie(zad).subscribe();
     this.router.navigate(['/event/list/'+[this.eventId]]);

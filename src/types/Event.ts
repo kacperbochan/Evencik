@@ -2,6 +2,7 @@ import { IEvent } from './Interfaces/IEvent';
 import { Zadanie } from "./Zadanie";
 
 export class Event implements IEvent{
+  private _id:number;
   private _nazwa: string;
   private _dataPoczatek: Date;
   private _dataKoniec: Date;
@@ -10,13 +11,21 @@ export class Event implements IEvent{
   private _zadania: Zadanie[] = [];
   //#endregion
 
-  constructor(nazwa:string = "", poczatek:Date = new Date(0), koniec:Date = new Date(0)){
+  constructor(id:number, nazwa:string = "", poczatek:Date = new Date(0), koniec:Date = new Date(0)){
+    this._id = id;
     this._nazwa = nazwa;
     this._dataPoczatek = poczatek;
     this._dataKoniec = koniec;
   }
 
   //#region get/set
+  public get id() : number {
+    return this._id;
+  }
+  public set id(id:number){
+      this._id = id;
+  }
+
   public get nazwa() : string {
       return this._nazwa;
   }

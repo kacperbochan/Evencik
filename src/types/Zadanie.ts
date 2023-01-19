@@ -2,6 +2,7 @@ import { IZadanie } from './Interfaces/IZadanie';
 import { Wolontariusz } from "./Wolontariusz";
 
 export class Zadanie implements IZadanie {
+  private _id: number;
   private _nazwa: string;
   private _czasPoczatek: Date = new Date();
   private _czasKoniec: Date = new Date();
@@ -12,7 +13,8 @@ export class Zadanie implements IZadanie {
   private _eventId: number;
   private _przydzieleniId: number[];
 
-  constructor(nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0), eventId = -1){
+  constructor(id:number, nazwa:string="", wymagani:number=-1, obecni:number=-1, poczatek:Date=new Date(0), koniec = new Date(0), eventId:number = -1){
+      this._id = id;
       this._nazwa = nazwa;
 
       this._czasPoczatek = new Date(poczatek);
@@ -25,6 +27,12 @@ export class Zadanie implements IZadanie {
       this._przydzieleniId = [];
   }
 
+  public get id() : number {
+    return this._id;
+  }
+  public set id(id:number){
+      this._id = id;
+  }
 
   public get nazwa() : string {
       return this._nazwa;

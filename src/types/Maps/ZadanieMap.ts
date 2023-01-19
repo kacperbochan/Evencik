@@ -1,6 +1,7 @@
 import { IZadanie } from "../Interfaces/IZadanie";
 
 export class ZadanieMap implements IZadanie {
+  id?:number;
   nazwa: string;
   czasPoczatek: Date;
   czasKoniec: Date;
@@ -9,6 +10,7 @@ export class ZadanieMap implements IZadanie {
   przydzieleniId: number[];
 
   constructor(zadanie:IZadanie){
+    this.id=zadanie.id
     this.nazwa=zadanie.nazwa,
     this.czasPoczatek = zadanie.czasPoczatek,
     this.czasKoniec = zadanie.czasKoniec,
