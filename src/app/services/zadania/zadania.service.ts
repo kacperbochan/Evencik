@@ -46,15 +46,26 @@ export class ZadaniaService {
         catchError(this.handleError<ZadanieMap>('addZadanie'))
       );
   }
-
+/*
   editZadanie(editedZadanie: Zadanie, nr:number):void{
     this.zadania[nr]=editedZadanie;
+  }
+*/
+
+  getZadanie(id:number):Observable<Zadanie>{
+    const newUrl = `${this.url}/${id}`;
+    return this.http.get<Zadanie>(newUrl);
   }
 
 
   deleteZadanie(id:number):Observable<Zadanie>{
     const newUrl = `${this.url}/${id}`;
     return this.http.delete<Zadanie>(newUrl);
+  }
+
+  editZadanie(zadanie:Zadanie):Observable<Zadanie>{
+    const newUrl = `${this.url}/${zadanie.id}`;
+    return this.http.put<Zadanie>(newUrl, zadanie);
   }
 
 

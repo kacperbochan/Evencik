@@ -2,6 +2,8 @@ import {CdkDragDrop, moveItemInArray, transferArrayItem} from '@angular/cdk/drag
 import { Component, OnInit } from '@angular/core';
 import { WolontariuszeService } from 'src/app/services/wolontariusze/wolontariusze.service';
 import { Wolontariusz } from 'src/types/Wolontariusz';
+import { ActivatedRoute } from '@angular/router';
+import { ZadaniaService } from 'src/app/services/zadania/zadania.service';
 
 @Component({
   selector: 'app-zadanie-edit',
@@ -12,19 +14,28 @@ export class ZadanieEditComponent implements OnInit {
 
   wszyscy:string[]=[];
   przypisani:string[]=[];
-
   wszyscyWolo:Wolontariusz[]=[];
   przypisaniWolo:Wolontariusz[]=[];
 
+  name?: string;
+  startDate?: Date;
+  endDate?: Date;
+  age?: number;
 
-  constructor(private woloService: WolontariuszeService) {
+
+  constructor(private woloService: WolontariuszeService, private zadaniaService: ZadaniaService, private route: ActivatedRoute) {
     woloService.getWolontariuszeAsynch().subscribe(data=>data.map(osoba=>{
     this.wszyscy.push(osoba.imie);
     this.wszyscyWolo.push(osoba)}));
    }
 
   ngOnInit(): void {
-
+    this.route.params.subscribe((parameters) => this.zadaniaService.getZadanie(parameters['id']).subscribe((retrievedZadanie) => {
+      this.name = retrievedZadanie.nazwa,
+      this.startDate = retrievedZadanie.czasPoczatek
+      this.endDate = retrievedZadanie.czasKoniec
+      this.age = retrievedZadanie.wolontariuszeWymagani
+    }));
   }
 
   drop(event: CdkDragDrop<string[]>) {

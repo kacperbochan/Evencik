@@ -6,12 +6,12 @@
 
   <div class="g-5 d-flex justify-content-center">
     <div class="col-md-7">
-      <h4 class="mb-3">Kreator Zadań</h4>
+      <h4 class="mb-3">Edytuj Zadanie</h4>
       <form class="needs-validation" novalidate>
         <div class="row g-3">
           <div class="col-sm-12">
             <label for="name" class="form-label">Nazwa</label>
-            <input type="text" class="form-control" id="name" placeholder="zadanie-1" value="" required>
+            <input type="text" class="form-control" id="name" [(ngModel)]="name" required>
             <div class="invalid-feedback">
               Podano nieprawidłową nazwę
             </div>
@@ -20,7 +20,7 @@
           <div class="col-6">
             <label for="startDate" class="form-label">Początek</label>
             <div class="input-group has-validation">
-              <input type="datetime-local" class="form-control" id="startDate" required>
+              <input type="datetime-local" class="form-control" id="startDate" [(ngModel)]="startDate" required>
             <div class="invalid-feedback">
                 Podano nieprawidłową datę początkową
               </div>
@@ -30,7 +30,7 @@
           <div class="col-6">
             <label for="endDate" class="form-label">Koniec</label>
             <div class="input-group has-validation">
-              <input type="datetime-local" class="form-control" id="endDate" required>
+              <input type="datetime-local" class="form-control" id="endDate" [(ngModel)]="endDate" required>
             <div class="invalid-feedback">
                 Podano nieprawidłową datę końcową
               </div>
@@ -39,7 +39,7 @@
 
           <div class="col-md-12">
             <label for="age" class="form-label">Wymagani wolontariusze</label>
-            <input type="number" class="form-control" min="1" id="age" placeholder="1" required>
+            <input type="number" class="form-control" min="1" id="age" placeholder="1" [(ngModel)]="age" required>
             <div class="invalid-feedback">
               Podano nieprawidłową ilość wymaganych wolontariuszy
             </div>
