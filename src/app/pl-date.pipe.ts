@@ -6,7 +6,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class PlDatePipe implements PipeTransform {
 
   transform(value: any, ...args: any[]): any {
-    console.log(typeof value);
+    //console.log(typeof value);
     const dt = new Date(value);
     const dateStr=dt.toDateString();
     const dateTab = dateStr.split(' ');

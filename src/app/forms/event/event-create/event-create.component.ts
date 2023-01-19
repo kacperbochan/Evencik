@@ -39,7 +39,7 @@ export class EventCreateComponent implements OnInit {
   }
 
   addEvent() {
-      const event = new Event(this.formModel.value.name, this.formModel.value.startDate, this.formModel.value.endDate);
+      const event = new Event(0, this.formModel.value.name, this.formModel.value.startDate, this.formModel.value.endDate);
       this.eventService.addEvent(event).subscribe();
       this.router.navigate(['/']);
   }

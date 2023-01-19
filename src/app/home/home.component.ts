@@ -28,7 +28,7 @@ export class HomeComponent implements OnInit {
   }
 
   addEvent() {
-    const event = new Event('Stephen', new Date(0), new Date(0) );
+    const event = new Event(0, 'Stephen', new Date(0), new Date(0) );
     this.eventService.addEvent(event).subscribe(ret => this.events.push(event));
   }
 

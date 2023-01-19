@@ -21,22 +21,12 @@ export class EventComponent implements OnInit {
     zadaniaService.getZadaniaAsynch().subscribe(data=>this.zadania=data.filter(x=>x.eventId==this.eventId));
   }
 
-  /*Events = new Array(
-    new Zadanie("Zamieść scenę", 3),
-    new Zadanie("Ogarnąć pare kabli", 2, 2),
-    new Zadanie("Kupić pizzę", 2,1),
-    new Zadanie("Wyciścić WC"),
-    new Zadanie("Zrób salto")
-  );
-*/
-
-
   ngOnInit() {}
 
   addZadanie() {
-    const zadanie = new Zadanie('Stephen',2 ,2, new Date(0), new Date(0), this.eventId);
+    const zadanie = new Zadanie(1, 'Stephen',2 ,2, new Date(0), new Date(0), this.eventId);
     zadanie.przydzieleniId=[];
-    console.log(zadanie);
+    console.log("addZadanie (event) "+ this.eventId);
     this.zadaniaService.addZadanie(zadanie).subscribe(ret => this.zadania.push(zadanie));
   }
 

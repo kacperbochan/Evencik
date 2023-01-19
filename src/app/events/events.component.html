@@ -11,6 +11,7 @@
     {{event.czasKoniec | plDate }}
 </td>
 <td class="control">
-  <button class="button"  [routerLink]="['/event/list/'+[id]]" >Wgląd</button>
+  <button class="button" (click)="onClick()"  [routerLink]="['/event/list/'+[id]]" >Wgląd</button>
   <button class="button" [routerLink]="['/event/edit']" >Edytuj</button>
+  <button class="button" (click)="onDelete()" >Usuń</button>
 </td>

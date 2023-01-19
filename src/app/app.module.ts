@@ -59,7 +59,7 @@ import { PlDatePipe } from './pl-date.pipe';
       { path: 'wolo/create', component: WolontariuszCreateComponent },
       { path: 'wolo/edit', component: WolontariuszEditComponent },
       { path: 'zadanie/create/:id', component: ZadanieCreateComponent },
-      { path: 'zadanie/edit', component: ZadanieEditComponent },
+      { path: 'zadanie/edit/:id', component: ZadanieEditComponent },
       { path: 'wolo', component: WolontariuszeComponent },
       { path: 'zadanie', component: EventComponent },
     ])

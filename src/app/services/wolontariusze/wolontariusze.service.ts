@@ -54,7 +54,6 @@ export class WolontariuszeService  {
       .pipe(
         catchError(this.handleError<Wolontariusz>('addWolontariusz'))
       );
-
   }
 
 }
